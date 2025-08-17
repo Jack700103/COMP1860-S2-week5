@@ -1,0 +1,13 @@
+// 1. Sys.xor: Bitwise XOR of two values
+function Sys.xor 2
+    push argument 0
+    push argument 1
+    and
+    not
+    
+    push argument 0
+    push argument 1
+    or
+    
+    and
+    return
