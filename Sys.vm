@@ -2,16 +2,7 @@
 // Student ID: 201860766
 
 load Sys.vm,
-output-file Test.out,
-output-list RAM[0]%D1.6.1 RAM[256]%D1.6.1;
-
-set sp 257,
-set local 100,
-set argument 200,
-set this 1000,
-set that 2000,
-set RAM[256] 31,
-repeat 100000 {
+{
 
 // Sys.xor
 function Sys.xor 0
