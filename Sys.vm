@@ -1,24 +1,30 @@
 // Sys.vm
 // Student ID: 201860766
 
+load Sys.vm,
+output-file Test.out,
+output-list RAM[0]%D1.6.1 RAM[256]%D1.6.1;
+
+set sp 257,
+set local 100,
+set argument 200,
+set this 1000,
+set that 2000,
+set RAM[256] 31,
+repeat 100000 {
+
 // Sys.xor
 function Sys.xor 0
-pop argument 1
-pop argument 0
-
-push argument 1
-not
-push argument 0
-and
-
-push argument 0
-not
-push argument 1
-and 
-
-or
-return
-
+    pop argument 1
+    pop argument 0
+    push argument 1
+    not
+    push argument 0
+    not
+    push argument 1
+    and
+    or
+    return
 
 // Sys.shiftLeft 2
 function Sys.shiftLeft 2
@@ -138,3 +144,6 @@ label SKIP_SET
 
 label AFTER_SET
     return
+
+}
+output;
