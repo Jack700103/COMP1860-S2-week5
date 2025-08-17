@@ -3,7 +3,6 @@
 
 load Sys.vm,
 {
-
 // Sys.xor
 function Sys.xor 0
     pop argument 1
