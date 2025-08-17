@@ -1,10 +1,12 @@
+// Student ID: 201860766
+
 // 2. Sys.shiftLeft: Shift left operation (x << y)
 function Sys.shiftLeft 2
     push argument 0
-    pop local 0           // result = x
+    pop local 0           
     
     push argument 1
-    pop local 1           // counter = y
+    pop local 1          
     
     label SHIFT_LOOP
     push local 1
@@ -14,12 +16,12 @@ function Sys.shiftLeft 2
     
     push local 0
     add
-    pop local 0           // result = result + result (equivalent to <<1)
+    pop local 0          
     
     push local 1
     push constant 1
     sub
-    pop local 1           // counter--
+    pop local 1          
     
     goto SHIFT_LOOP
     label END_SHIFT

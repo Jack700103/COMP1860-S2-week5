@@ -1,10 +1,12 @@
+// Student ID: 201860766
+
 // 3. Sys.computeParity: Compute parity of 15 LSBs
 function Sys.computeParity 4
     push constant 0
-    pop local 0           // parity = 0
+    pop local 0           
     
     push constant 0
-    pop local 1           // i = 0
+    pop local 1           
     
     label PARITY_LOOP
     push local 1
@@ -12,13 +14,11 @@ function Sys.computeParity 4
     eq
     if-goto END_PARITY
     
-    // Create bitmask: 1 << i
     push constant 1
     push local 1
     call Sys.shiftLeft 2
-    pop local 2           // bitmask = 1 << i
-    
-    // Check if bit is set
+    pop local 2          
+     
     push argument 0
     push local 2
     and
@@ -33,13 +33,13 @@ function Sys.computeParity 4
     push local 0
     push constant 1
     call Sys.xor 2
-    pop local 0           // parity = parity XOR 1
+    pop local 0           
     
     label NEXT_BIT
     push local 1
     push constant 1
     add
-    pop local 1           // i++
+    pop local 1           
     
     goto PARITY_LOOP
     label END_PARITY
