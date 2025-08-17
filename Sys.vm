@@ -3,9 +3,6 @@
 
 // Sys.xor
 function Sys.xor 0
-// 实际实现需逐位计算异或，建议参考Sys.computeParity的位操作逻辑
-// 以下为伪代码框架：
-function Sys.xor 0
     @SP
     AM=M-1
     D=M
